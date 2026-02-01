@@ -12,7 +12,7 @@ const plans = [
       "7-day note history",
       "Email support"
     ],
-    cta: "Start Free Trial",
+    cta: "Request Demo",
     popular: false
   },
   {
@@ -29,7 +29,7 @@ const plans = [
       "Reports & analytics",
       "Priority support"
     ],
-    cta: "Start Free Trial",
+    cta: "Request Demo",
     popular: true
   },
   {
@@ -62,7 +62,7 @@ const plans = [
         Simple, transparent pricing
       </h2>
       <p class="text-xl text-gray-400">
-        Start free for 14 days. No credit card required.
+        Choose the plan that fits your team. Request a demo to get started.
       </p>
     </div>
 
@@ -97,7 +97,7 @@ const plans = [
           </ul>
 
           <a
-            href={plan.name === 'Enterprise' ? 'mailto:sales@hudboard.app' : '#'}
+            href="mailto:sales@hudboard.app"
             class={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
               plan.popular
                 ? 'bg-primary-600 hover:bg-primary-500 text-white'
