@@ -1,7 +1,7 @@
 ---
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
+<header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
@@ -29,3 +29,30 @@
     </div>
   </nav>
 </header>
+
+<script>
+  const header = document.getElementById('header');
+
+  function updateHeader() {
+    const scrollY = window.scrollY;
+    const maxScroll = 100;
+    const opacity = Math.min(scrollY / maxScroll, 1);
+
+    if (scrollY > 10) {
+      header?.classList.add('bg-gray-950/90', 'backdrop-blur-md', 'border-gray-800');
+      header?.classList.remove('border-transparent');
+      if (header) {
+        header.style.backgroundColor = `rgba(3, 7, 18, ${0.5 + opacity * 0.4})`;
+      }
+    } else {
+      header?.classList.remove('bg-gray-950/90', 'backdrop-blur-md', 'border-gray-800');
+      header?.classList.add('border-transparent');
+      if (header) {
+        header.style.backgroundColor = 'transparent';
+      }
+    }
+  }
+
+  window.addEventListener('scroll', updateHeader);
+  updateHeader();
+</script>
