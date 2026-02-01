@@ -1,0 +1,58 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Create a note",
+    description: "When a call comes in, quickly jot down the key details - contact name, phone number, and what they need."
+  },
+  {
+    number: "02",
+    title: "Set expiration",
+    description: "Add an expiration time if follow-up is needed. The note will alert the team as the deadline approaches."
+  },
+  {
+    number: "03",
+    title: "Team sees it instantly",
+    description: "The note appears on everyone's board in real-time. No refresh, no delays - instant visibility."
+  },
+  {
+    number: "04",
+    title: "Collaborate & resolve",
+    description: "Team members can add comments, update the note, or mark it resolved. Everyone stays in the loop."
+  }
+];
+---
+
+<section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+        Simple workflow, powerful results
+      </h2>
+      <p class="text-xl text-gray-400">
+        Get your team up and running in minutes, not days.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {steps.map((step, index) => (
+        <div class="relative">
+          {/* Connector line */}
+          {index < steps.length - 1 && (
+            <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary-600 to-transparent"></div>
+          )}
+
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-950 border-2 border-primary-600 text-primary-400 font-bold text-xl mb-4">
+              {step.number}
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">{step.title}</h3>
+            <p class="text-gray-400">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

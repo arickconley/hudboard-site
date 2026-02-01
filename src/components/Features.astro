@@ -1,0 +1,61 @@
+---
+const features = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    title: "Real-time Updates",
+    description: "Changes sync instantly across all connected users. No refresh needed - see new notes appear the moment they're created."
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    title: "Smart Expiration",
+    description: "Set notes to expire after a specific time. Get visual alerts as deadlines approach so nothing falls through the cracks."
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>`,
+    title: "Granular Permissions",
+    description: "Control who can create, edit, and delete notes. Define custom roles for operators, supervisors, and admins."
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>`,
+    title: "Pin Important Notes",
+    description: "Keep critical information visible at the top of the board. Pinned notes stay prominent until you decide otherwise."
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>`,
+    title: "Threaded Comments",
+    description: "Add comments to any note for context and updates. Keep the conversation attached to the relevant information."
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
+    title: "Reports & Archive",
+    description: "Access historical data with powerful search and filtering. Generate reports on note activity and team performance."
+  }
+];
+---
+
+<section id="features" class="py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+        Everything your team needs
+      </h2>
+      <p class="text-xl text-gray-400">
+        Built specifically for call centers, with features that actually matter for your workflow.
+      </p>
+    </div>
+
+    <!-- Features grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature) => (
+        <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-gray-700 transition-colors">
+          <div class="w-12 h-12 bg-primary-950 rounded-lg flex items-center justify-center text-primary-400 mb-4">
+            <Fragment set:html={feature.icon} />
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+          <p class="text-gray-400">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
