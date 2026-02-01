@@ -25,3 +25,17 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Animated flow effect for step connector */
+@keyframes flow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-flow {
+  animation: flow 3s ease-in-out infinite;
+}

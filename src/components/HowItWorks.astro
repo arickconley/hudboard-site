@@ -38,7 +38,12 @@ const steps = [
     <!-- Steps -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
       {/* Connector line behind all steps - only on large screens */}
-      <div class="hidden lg:block absolute top-8 left-[calc(12.5%+32px)] right-[calc(12.5%+32px)] h-0.5 bg-gradient-to-r from-primary-600 via-primary-600 to-primary-600/30"></div>
+      <div class="hidden lg:block absolute top-8 left-[calc(12.5%+32px)] right-[calc(12.5%+32px)] h-0.5 bg-primary-950 overflow-hidden">
+        {/* Animated pulse traveling along the line */}
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary-400 to-transparent animate-flow"></div>
+        {/* Base line */}
+        <div class="absolute inset-0 bg-primary-600/40"></div>
+      </div>
 
       {steps.map((step) => (
         <div class="relative z-10">
