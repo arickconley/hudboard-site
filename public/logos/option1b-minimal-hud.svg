@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad1b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#22d3ee"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="url(#grad1b)"/>
+
+  <!-- Minimal H with HUD targeting reticle style -->
+  <!-- Left vertical of H -->
+  <rect x="18" y="16" width="5" height="32" rx="2" fill="white"/>
+  <!-- Right vertical of H -->
+  <rect x="41" y="16" width="5" height="32" rx="2" fill="white"/>
+  <!-- Horizontal bar of H -->
+  <rect x="18" y="27" width="28" height="5" rx="2" fill="white"/>
+
+  <!-- HUD reticle corners -->
+  <!-- Top left -->
+  <path d="M10 18 L10 10 L18 10" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <!-- Top right -->
+  <path d="M46 10 L54 10 L54 18" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <!-- Bottom left -->
+  <path d="M10 46 L10 54 L18 54" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <!-- Bottom right -->
+  <path d="M46 54 L54 54 L54 46" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Center dot accent -->
+  <circle cx="32" cy="50" r="2" fill="white" opacity="0.7"/>
+</svg>
