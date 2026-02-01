@@ -1,52 +1,44 @@
 ---
 const plans = [
   {
-    name: "Starter",
-    price: "$29",
-    period: "/month",
-    description: "Perfect for small teams getting started",
-    features: [
-      "Up to 10 users",
-      "Unlimited notes",
-      "Real-time sync",
-      "7-day note history",
-      "Email support"
-    ],
-    cta: "Request Demo",
-    popular: false
-  },
-  {
     name: "Business",
-    price: "$79",
+    price: "$99",
     period: "/month",
-    description: "For growing call centers",
+    description: "For call centers and teams",
     features: [
       "Up to 50 users",
       "Unlimited notes",
-      "Real-time sync",
-      "Unlimited history",
+      "365-day archive retention",
+      "Real-time updates",
+      "Comments & collaboration",
+      "Note expiration & pinning",
+      "Archive with search",
       "Custom roles & permissions",
-      "Reports & analytics",
-      "Priority support"
+      "Custom branding",
+      "API access",
+      "Data export (CSV, JSON)",
+      "Email support"
     ],
     cta: "Request Demo",
     popular: true
   },
   {
     name: "Enterprise",
-    price: "Custom",
-    period: "",
+    price: "$499",
+    period: "/month",
     description: "For large organizations",
     features: [
       "Unlimited users",
       "Unlimited notes",
-      "Real-time sync",
-      "Unlimited history",
-      "Custom roles & permissions",
-      "Advanced analytics",
-      "SSO / SAML",
+      "Unlimited archive retention",
+      "Everything in Business, plus:",
+      "Call signs module",
+      "Audit logging",
+      "SSO / SAML integration",
+      "Webhooks",
+      "SLA guarantee",
       "Dedicated support",
-      "SLA guarantee"
+      "On-premise deployment option"
     ],
     cta: "Contact Sales",
     popular: false
@@ -67,7 +59,7 @@ const plans = [
     </div>
 
     <!-- Pricing cards -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
       {plans.map((plan) => (
         <div class={`relative bg-gray-900 rounded-xl p-8 border ${plan.popular ? 'border-primary-500 ring-2 ring-primary-500/20' : 'border-gray-800'}`}>
           {plan.popular && (
@@ -87,10 +79,12 @@ const plans = [
 
           <ul class="space-y-4 mb-8">
             {plan.features.map((feature) => (
-              <li class="flex items-center gap-3 text-gray-300">
-                <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
+              <li class={`flex items-center gap-3 ${feature.includes('Everything in') ? 'text-primary-400 font-medium mt-4 pt-4 border-t border-gray-800' : 'text-gray-300'}`}>
+                {!feature.includes('Everything in') && (
+                  <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                )}
                 {feature}
               </li>
             ))}
@@ -108,6 +102,13 @@ const plans = [
           </a>
         </div>
       ))}
+    </div>
+
+    <!-- Add-on note -->
+    <div class="text-center mt-12">
+      <p class="text-gray-400">
+        Need additional modules? <a href="mailto:sales@hudboard.app" class="text-primary-400 hover:text-primary-300">Contact us</a> about add-ons like Call Signs ($25/mo).
+      </p>
     </div>
   </div>
 </section>
