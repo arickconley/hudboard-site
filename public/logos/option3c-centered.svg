@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad3c" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#22d3ee"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="url(#grad3c)"/>
+
+  <!-- Back note card -->
+  <rect x="20" y="12" width="28" height="22" rx="4" fill="white" opacity="0.35" transform="rotate(6 34 23)"/>
+
+  <!-- Middle note card -->
+  <rect x="16" y="18" width="28" height="22" rx="4" fill="white" opacity="0.6" transform="rotate(-3 30 29)"/>
+
+  <!-- Front note card -->
+  <rect x="12" y="24" width="28" height="22" rx="4" fill="white"/>
+
+  <!-- Subtle text lines on front card -->
+  <rect x="17" y="30" width="16" height="2" rx="1" fill="#0ea5e9" opacity="0.35"/>
+  <rect x="17" y="35" width="12" height="2" rx="1" fill="#0ea5e9" opacity="0.35"/>
+  <rect x="17" y="40" width="18" height="2" rx="1" fill="#0ea5e9" opacity="0.35"/>
+</svg>
