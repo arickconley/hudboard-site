@@ -9,15 +9,7 @@
   <!-- Background -->
   <rect width="64" height="64" rx="14" fill="url(#grad1b)"/>
 
-  <!-- Minimal H with HUD targeting reticle style -->
-  <!-- Left vertical of H -->
-  <rect x="18" y="16" width="5" height="32" rx="2" fill="white"/>
-  <!-- Right vertical of H -->
-  <rect x="41" y="16" width="5" height="32" rx="2" fill="white"/>
-  <!-- Horizontal bar of H -->
-  <rect x="18" y="27" width="28" height="5" rx="2" fill="white"/>
-
-  <!-- HUD reticle corners -->
+  <!-- HUD reticle corners (board frame) -->
   <!-- Top left -->
   <path d="M10 18 L10 10 L18 10" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
   <!-- Top right -->
@@ -27,6 +19,17 @@
   <!-- Bottom right -->
   <path d="M46 54 L54 54 L54 46" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
 
-  <!-- Center dot accent -->
-  <circle cx="32" cy="50" r="2" fill="white" opacity="0.7"/>
+  <!-- Note cards inside the HUD frame (the board) -->
+  <!-- Back card -->
+  <rect x="26" y="16" width="20" height="14" rx="2" fill="white" opacity="0.4"/>
+  <!-- Front card -->
+  <rect x="18" y="22" width="20" height="14" rx="2" fill="white"/>
+
+  <!-- Text lines on front card -->
+  <rect x="21" y="26" width="12" height="2" rx="1" fill="#0ea5e9" opacity="0.4"/>
+  <rect x="21" y="30" width="8" height="2" rx="1" fill="#0ea5e9" opacity="0.4"/>
+
+  <!-- Third card at bottom -->
+  <rect x="22" y="40" width="20" height="10" rx="2" fill="white" opacity="0.7"/>
+  <rect x="25" y="44" width="10" height="2" rx="1" fill="#0ea5e9" opacity="0.4"/>
 </svg>

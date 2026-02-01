@@ -3,70 +3,34 @@ import Layout from '../layouts/Layout.astro';
 
 const logos = [
   {
-    id: 'option3',
-    name: 'Option 3: Stacked Notes',
-    description: 'Three stacked note cards with depth. Clean layered look representing multiple notes.',
-    file: '/logos/option3-connection.svg'
-  },
-  {
-    id: 'option3b',
-    name: 'Option 3B: Stacked + Indicator',
-    description: 'Two stacked cards with real-time indicator dot. Cleaner, with live status.',
-    file: '/logos/option3b-stacked-clean.svg'
-  },
-  {
-    id: 'option3c',
-    name: 'Option 3C: Fanned Cards',
-    description: 'Slightly rotated overlapping cards for a dynamic, casual feel.',
-    file: '/logos/option3c-centered.svg'
-  },
-  {
-    id: 'option1',
-    name: 'Option 1: HUD Lettermark',
-    description: 'Stylized H with heads-up display corner brackets. Tech-forward, clean.',
-    file: '/logos/option1-hud-lettermark.svg'
-  },
-  {
     id: 'option1b',
-    name: 'Option 1B: Minimal HUD',
-    description: 'Cleaner version with refined targeting reticle corners.',
+    name: 'Option 1B: HUD Board',
+    description: 'HUD-style frame with note cards inside. The corners represent the "board" containing the notes.',
     file: '/logos/option1b-minimal-hud.svg'
   },
   {
-    id: 'option2',
-    name: 'Option 2: Board + Real-time',
-    description: 'Grid of note cards with animated pulse indicator. Shows the "board" concept with real-time updates.',
-    file: '/logos/option2-board-realtime.svg'
-  },
-  {
-    id: 'option4',
-    name: 'Option 4: Geometric H',
-    description: 'Bold, solid geometric H. Simple, memorable, scales well.',
-    file: '/logos/option4-geometric-h.svg'
-  },
-  {
-    id: 'option4b',
-    name: 'Option 4B: Rounded H',
-    description: 'Softer, friendlier version with rounded pill shapes.',
-    file: '/logos/option4b-rounded-h.svg'
+    id: 'option3b',
+    name: 'Option 3B: Perspective Stack',
+    description: 'Stacked note cards with perspective - wider at bottom, narrower at top for depth.',
+    file: '/logos/option3b-stacked-clean.svg'
   }
 ];
 ---
 
 <Layout title="HUDBoard Logo Options">
   <div class="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
         <h1 class="text-4xl font-bold text-white mb-4">Logo Options</h1>
-        <p class="text-xl text-gray-400">Choose the logo that best represents HUDBoard</p>
+        <p class="text-xl text-gray-400">Final two concepts</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {logos.map((logo) => (
           <div class="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden hover:border-primary-500 transition-colors">
             <!-- Logo preview area -->
-            <div class="p-8 bg-gray-950 flex items-center justify-center">
-              <img src={logo.file} alt={logo.name} class="w-32 h-32" />
+            <div class="p-12 bg-gray-950 flex items-center justify-center">
+              <img src={logo.file} alt={logo.name} class="w-40 h-40" />
             </div>
 
             <!-- Logo info -->
@@ -75,7 +39,7 @@ const logos = [
               <p class="text-gray-400 text-sm mb-4">{logo.description}</p>
 
               <!-- Size previews -->
-              <div class="flex items-center gap-4 pt-4 border-t border-gray-800">
+              <div class="flex items-center gap-6 pt-4 border-t border-gray-800">
                 <div class="text-center">
                   <img src={logo.file} alt="" class="w-16 h-16 mx-auto mb-1" />
                   <span class="text-xs text-gray-500">64px</span>
@@ -85,12 +49,12 @@ const logos = [
                   <span class="text-xs text-gray-500">40px</span>
                 </div>
                 <div class="text-center">
-                  <img src={logo.file} alt="" class="w-6 h-6 mx-auto mb-1" />
-                  <span class="text-xs text-gray-500">24px</span>
+                  <img src={logo.file} alt="" class="w-8 h-8 mx-auto mb-1" />
+                  <span class="text-xs text-gray-500">32px</span>
                 </div>
                 <div class="text-center">
-                  <img src={logo.file} alt="" class="w-4 h-4 mx-auto mb-1" />
-                  <span class="text-xs text-gray-500">16px</span>
+                  <img src={logo.file} alt="" class="w-5 h-5 mx-auto mb-1" />
+                  <span class="text-xs text-gray-500">20px</span>
                 </div>
               </div>
             </div>
@@ -101,12 +65,12 @@ const logos = [
       <!-- Light background preview -->
       <div class="mt-16">
         <h2 class="text-2xl font-bold text-white mb-8 text-center">On Light Background</h2>
-        <div class="bg-white rounded-xl p-8">
-          <div class="flex flex-wrap items-center justify-center gap-8">
+        <div class="bg-white rounded-xl p-12">
+          <div class="flex items-center justify-center gap-16">
             {logos.map((logo) => (
               <div class="text-center">
-                <img src={logo.file} alt={logo.name} class="w-20 h-20 mx-auto mb-2" />
-                <span class="text-xs text-gray-600">{logo.id}</span>
+                <img src={logo.file} alt={logo.name} class="w-24 h-24 mx-auto mb-3" />
+                <span class="text-sm text-gray-600 font-medium">{logo.id}</span>
               </div>
             ))}
           </div>
@@ -116,13 +80,26 @@ const logos = [
       <!-- With wordmark preview -->
       <div class="mt-16">
         <h2 class="text-2xl font-bold text-white mb-8 text-center">With Wordmark</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="space-y-6">
           {logos.map((logo) => (
             <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
-              <div class="flex items-center gap-3">
-                <img src={logo.file} alt="" class="w-10 h-10" />
-                <span class="text-xl font-bold text-white">HUDBoard</span>
+              <div class="flex items-center gap-4">
+                <img src={logo.file} alt="" class="w-12 h-12" />
+                <span class="text-2xl font-bold text-white">HUDBoard</span>
               </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Dark compact -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">Compact Header</h2>
+        <div class="space-y-4">
+          {logos.map((logo) => (
+            <div class="bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 inline-flex items-center gap-3 mr-4">
+              <img src={logo.file} alt="" class="w-8 h-8" />
+              <span class="text-lg font-bold text-white">HUDBoard</span>
             </div>
           ))}
         </div>
